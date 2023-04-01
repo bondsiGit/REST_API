@@ -4,8 +4,16 @@ const router = express.Router();
 
 const userController = require('../controller/user.js');
 
+//CREATE - POST
+router.post('/', userController.createUsers);
+
+//READ - GET
 router.get('/', userController.getAllUser);
 
-router.post('/', userController.createUsers);
+//UPDATE - PATCH
+router.patch('/:id', userController.updateUsers);
+
+//DELETE - DELETE
+router.delete('/:id', userController.deleteUser)
 
 module.exports = router;
