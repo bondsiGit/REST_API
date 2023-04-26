@@ -13,8 +13,8 @@ const createNewUser = (body) => {
 
 const updateUser = (body, idUser) => {
     const SQLQuery = `  UPDATE user 
-                        SET name= '${body.name}', email= '${body.eamil}, address=${body.address} 
-                        WHERE id=${idUser}`
+                        SET name= '${body.name}', email= '${body.email}', address='${body.address}' 
+                        WHERE id=${idUser}`;
     return dbPool.execute(SQLQuery);
 }
 
